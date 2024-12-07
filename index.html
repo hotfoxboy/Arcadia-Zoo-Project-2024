@@ -5,37 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoRide - Page d'accueil</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+    <link rel="stylesheet" href="scss/main.css"/>
     <style>
-        /* Ajoutez ici vos styles CSS */
+        /* Styles globaux */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #F5F5F5;
         }
         header {
-            background-color: #4CAF50;
+            background-color: #013220; /* Vert Foncé */
             color: white;
-            padding: 10px 20px;
-            text-align: center;
         }
         footer {
-            background-color: #333;
+            background-color: #3A5F41; /* Vert Mousse */
             color: white;
             padding: 10px 20px;
             text-align: center;
-            position: fixed;
+            position: relative;
             bottom: 0;
             width: 100%;
         }
+        footer a {
+            color: #E8E8E8;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #FAFAF0;
+            text-decoration: underline;
+        }
         main {
             padding: 20px;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white !important;
+        }
+        .navbar {
+            padding: 0.8rem 1rem;
+        }
+        .nav-link {
+            color: white !important;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #3A5F41 !important;
+        }
+        .btn-outline-success {
+            color: white;
+            border-color: white;
+        }
+        .btn-outline-success:hover {
+            color: #013220;
+            background-color: white;
         }
     </style>
 </head>
 <body>
     <header>
-        Le menu de mon site
+        <header>
+            <nav class="navbar navbar-expand-lg" style="background-color: #013220;">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white" href="/">EcoRide</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/covoiturages">Covoiturages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/devenir-conducteur">Devenir conducteur</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/mon-compte">Mon compte</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="/Connexion">Connexion/Deconnexion</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        
     </header>
     
     <main id="main-page">
@@ -43,7 +102,7 @@
     </main>
 
     <footer>
-        Le footer de mon site
+        <p>&copy; 2024 EcoRide. Tous droits réservés. | <a href="#">Mentions légales</a> | <a href="#">Confidentialité</a></p>
     </footer>
 
     <script type="module" src="Router/router.js"></script>
